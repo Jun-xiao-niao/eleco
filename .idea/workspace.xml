@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8cc243c8-944e-4f52-b26c-b44dcc0d5376" name="变更" comment="takeout_web">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Controller/CollectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/CollectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Controller/GoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/GoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/MainwebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/MainwebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/CollectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/CollectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/GoodMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/GoodMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/HistoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/HistoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/OrderFormMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/OrderFormMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Service/LoginServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/LoginServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/MyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/FastJson2JsonRedisSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/FastJson2JsonRedisSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/KeyUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/KeyUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/MD5Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/MyMetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/RedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/RedisCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/ResponseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/ResponseResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/UuidTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/UuidTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/WebUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/WebUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/Collect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/Collect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/Good.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/LoginUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/OrderForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/OrderForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/SellGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/SellGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/takeout/mainweb/MainwebApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/randomnick/eleco/MainwebApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/takeout_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eleco.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/takeout_web.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/takeout/mainweb/MainwebApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/takeout/mainweb/config/CorsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/takeout/mainweb/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/takeout/mainweb/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/takeout/mainweb/MainwebApplicationTests.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="29BKg2HctbUSOxEIJrrjWHQUG86" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="项目" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.ElecoApplication">
+    <configuration name="ElecoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eleco" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="randomnick.eleco.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="randomnick.eleco" />
+      <option name="MAIN_CLASS_NAME" value="randomnick.eleco.ElecoApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ElecoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eleco" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="randomnick.eleco.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="randomnick.eleco" />
+      <option name="MAIN_CLASS_NAME" value="randomnick.eleco.ElecoApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ElecoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="eleco" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="randomnick.eleco.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="randomnick.eleco.ElecoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ElecoApplication" />
+        <item itemvalue="JUnit.ElecoApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.ElecoApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="8cc243c8-944e-4f52-b26c-b44dcc0d5376" name="变更" comment="" />
+      <created>1652581149884</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652581149884</updated>
+      <workItem from="1652581149886" duration="6849000" />
+      <workItem from="1652602481051" duration="8542000" />
+      <workItem from="1652661028344" duration="77000" />
+      <workItem from="1652688005833" duration="416000" />
+      <workItem from="1652688579907" duration="3230000" />
+      <workItem from="1652706168265" duration="330000" />
+      <workItem from="1653209492585" duration="1859000" />
+      <workItem from="1653211720392" duration="1534000" />
+      <workItem from="1653268895478" duration="10825000" />
+      <workItem from="1653302404151" duration="30000" />
+      <workItem from="1653302451476" duration="4068000" />
+      <workItem from="1653360157109" duration="9692000" />
+      <workItem from="1653445379589" duration="5838000" />
+      <workItem from="1653462262366" duration="2338000" />
+      <workItem from="1653478072528" duration="13706000" />
+      <workItem from="1653568903728" duration="3880000" />
+      <workItem from="1653579411060" duration="373000" />
+      <workItem from="1653582134142" duration="7827000" />
+      <workItem from="1653730900994" duration="6315000" />
+      <workItem from="1653824448467" duration="602000" />
+      <workItem from="1653830365304" duration="1522000" />
+      <workItem from="1653835002398" duration="6900000" />
+      <workItem from="1653890562908" duration="11974000" />
+      <workItem from="1653912532588" duration="11072000" />
+      <workItem from="1654225419363" duration="634000" />
+      <workItem from="1654347728181" duration="4150000" />
+      <workItem from="1654486004717" duration="69000" />
+      <workItem from="1654486875473" duration="199000" />
+      <workItem from="1655446686753" duration="1282000" />
+      <workItem from="1659356834283" duration="535000" />
+      <workItem from="1659357432864" duration="1510000" />
+      <workItem from="1659579660372" duration="5087000" />
+      <workItem from="1659604575006" duration="1627000" />
+      <workItem from="1659606220267" duration="83000" />
+      <workItem from="1659606314872" duration="89000" />
+      <workItem from="1659606411022" duration="52000" />
+      <workItem from="1659606469014" duration="93000" />
+      <workItem from="1659606578443" duration="330000" />
+      <workItem from="1659606914474" duration="5318000" />
+    </task>
+    <task id="LOCAL-00001" summary="测试增加功能">
+      <created>1652582415847</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652582415847</updated>
+    </task>
+    <task id="LOCAL-00002" summary="takeout_web">
+      <created>1652584772601</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652584772601</updated>
+    </task>
+    <task id="LOCAL-00003" summary="takeout_web">
+      <created>1652586647424</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652586647424</updated>
+    </task>
+    <task id="LOCAL-00004" summary="takeout_web">
+      <created>1652608887578</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652608887578</updated>
+    </task>
+    <task id="LOCAL-00005" summary="takeout_web">
+      <created>1652609438819</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652609438819</updated>
+    </task>
+    <task id="LOCAL-00006" summary="takeout_web">
+      <created>1652691489153</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652691489153</updated>
+    </task>
+    <task id="LOCAL-00007" summary="takeout_web">
+      <created>1653792493938</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653792493938</updated>
+    </task>
+    <task id="LOCAL-00008" summary="takeout_web">
+      <created>1653879371670</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653879371670</updated>
+    </task>
+    <task id="LOCAL-00009" summary="takeout_web">
+      <created>1653888971346</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1653888971346</updated>
+    </task>
+    <task id="LOCAL-00010" summary="takeout_web">
+      <created>1653894892166</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1653894892167</updated>
+    </task>
+    <task id="LOCAL-00011" summary="takeout_web">
+      <created>1653923942167</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1653923942167</updated>
+    </task>
+    <task id="LOCAL-00012" summary="takeout_web">
+      <created>1653924011475</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1653924011475</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="测试增加功能" />
+    <MESSAGE value="takeout_web" />
+    <option name="LAST_COMMIT_MESSAGE" value="takeout_web" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/randomnick/eleco/ElecoApplicationTests.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
