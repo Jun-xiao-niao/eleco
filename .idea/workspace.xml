@@ -5,60 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cc243c8-944e-4f52-b26c-b44dcc0d5376" name="变更" comment="takeout_web">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Controller/CollectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/CollectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Controller/GoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/GoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/MainwebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/MainwebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/CollectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/CollectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/CommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/GoodMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/GoodMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/HistoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/HistoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/OrderFormMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/OrderFormMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Service/LoginServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/LoginServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/Service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/MyUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/FastJson2JsonRedisSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/FastJson2JsonRedisSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/KeyUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/KeyUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/MD5Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/MyMetaObjectHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/RedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/RedisCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/ResponseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/ResponseResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/UuidTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/UuidTool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/component/WebUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/component/WebUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/Collect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/Collect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/Good.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/LoginUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/OrderForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/OrderForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/SellGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/SellGood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/takeout/mainweb/entiy/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/entiy/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/takeout/mainweb/MainwebApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/randomnick/eleco/MainwebApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/takeout_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eleco.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/takeout_web.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/takeout/mainweb/MainwebApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/takeout/mainweb/config/CorsConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/takeout/mainweb/config/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/takeout/mainweb/config/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/takeout/mainweb/MainwebApplicationTests.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/PostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/TopicTagService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/impl/PostServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/impl/TopicTagServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/mapper/TagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/mapper/TopicMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/mapper/TopicTagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/model/entity/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/model/entity/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/model/entity/TopicTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/model/vo/PostVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PostMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/UserControllerrrrr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Controller/UserControllerrrrr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/impl/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomnick/eleco/Service/impl/MyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/randomnick/eleco/model/entity/Collect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/randomnick/eleco/model/entity/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/randomnick/eleco/model/entity/Good.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/randomnick/eleco/model/entity/History.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/randomnick/eleco/model/entity/LoginUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/randomnick/eleco/model/entity/OrderForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/randomnick/eleco/model/entity/SellGood.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +183,7 @@
       <workItem from="1659606411022" duration="52000" />
       <workItem from="1659606469014" duration="93000" />
       <workItem from="1659606578443" duration="330000" />
-      <workItem from="1659606914474" duration="5318000" />
+      <workItem from="1659606914474" duration="10477000" />
     </task>
     <task id="LOCAL-00001" summary="测试增加功能">
       <created>1652582415847</created>

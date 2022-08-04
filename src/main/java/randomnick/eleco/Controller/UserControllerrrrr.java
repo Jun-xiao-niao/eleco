@@ -1,83 +1,74 @@
-package randomnick.eleco.Controller;
-
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
-//import randomnick.eleco.mapper.GoodMapper;
-//import randomnick.eleco.mapper.HistoryMapper;
-//import randomnick.eleco.mapper.OrderFormMapper;
-import randomnick.eleco.mapper.UserMapper;
-import randomnick.eleco.Service.LoginService;
-import randomnick.eleco.component.KeyUtil;
-import randomnick.eleco.component.ResponseResult;
-import randomnick.eleco.model.entity.Good;
-import randomnick.eleco.model.entity.History;
-import randomnick.eleco.model.entity.OrderForm;
-import randomnick.eleco.model.entity.User;
-
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import java.io.File;
-import java.util.*;
-
-@Controller
-@RequestMapping("/userrrr")
-@Api("用户功能吧")
-public class UserControllerrrrr {
-
-    @Autowired
-    UserMapper userMapper;
+//package randomnick.eleco.Controller;
+//
+//import io.swagger.annotations.Api;
+//import io.swagger.annotations.ApiOperation;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.stereotype.Controller;
+//import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.bind.annotation.RequestMethod;
+//import org.springframework.web.bind.annotation.RequestParam;
+//import org.springframework.web.bind.annotation.ResponseBody;
+////import randomnick.eleco.mapper.GoodMapper;
+////import randomnick.eleco.mapper.HistoryMapper;
+////import randomnick.eleco.mapper.OrderFormMapper;
+//import randomnick.eleco.mapper.UserMapper;
+//import randomnick.eleco.Service.LoginService;
+//import randomnick.eleco.component.ResponseResult;
+//
+//import javax.servlet.http.HttpServletResponse;
+//import javax.servlet.http.HttpSession;
+//
+//@Controller
+//@RequestMapping("/userrrr")
+//@Api("用户功能吧")
+//public class UserControllerrrrr {
+//
+//    @Autowired
+//    UserMapper userMapper;
 //    @Autowired
 //    GoodMapper goodMapper;
 //    @Autowired
 //    HistoryMapper historyMapper;
 //    @Autowired
 //    OrderFormMapper orderFormMapper;
-    @Autowired
-    private LoginService loginService;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    @Value("C:/Users/Junxiaoniao/Desktop/west2/Picture/")
-    private String imagePath;
-
-    @Value("4934d114v1.qicp.vip/image/")
-    private String webPath;
-
-    @ApiOperation("登录方法")
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    @ResponseBody
-    public ResponseResult login(@RequestParam("username") String name,
-                                @RequestParam("password") String pwd,
-                                HttpServletResponse response,
-                                HttpSession session) {
-
-        return loginService.login(name, pwd);
-
-    }
-
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    @ResponseBody
-    public String hello() {
-        return "hello";
-    }
-
-    @ApiOperation("退出方法")
-    @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    @ResponseBody
-    public ResponseResult logout() {
-        return loginService.logout();
-
-    }
+//    @Autowired
+//    private LoginService loginService;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
+//
+//    @Value("C:/Users/Junxiaoniao/Desktop/west2/Picture/")
+//    private String imagePath;
+//
+//    @Value("4934d114v1.qicp.vip/image/")
+//    private String webPath;
+//
+//    @ApiOperation("登录方法")
+//    @RequestMapping(value = "/login", method = RequestMethod.POST)
+//    @ResponseBody
+//    public ResponseResult login(@RequestParam("username") String name,
+//                                @RequestParam("password") String pwd,
+//                                HttpServletResponse response,
+//                                HttpSession session) {
+//
+//        return loginService.login(name, pwd);
+//
+//    }
+//
+//    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+//    @ResponseBody
+//    public String hello() {
+//        return "hello";
+//    }
+//
+//    @ApiOperation("退出方法")
+//    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+//    @ResponseBody
+//    public ResponseResult logout() {
+//        return loginService.logout();
+//
+//    }
 
 //    @ApiOperation("注册方法")
 //    @RequestMapping(value = "/regist", method = RequestMethod.POST)
@@ -216,5 +207,5 @@ public class UserControllerrrrr {
 //        }
 //        return new ResponseResult(200, "查询成功", finalList);
 //    }
-
-}
+//
+//}
