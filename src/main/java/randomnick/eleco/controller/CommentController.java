@@ -1,69 +1,42 @@
-//package randomnick.eleco.Controller;
-//
-//import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-//import io.swagger.annotations.Api;
-//import io.swagger.annotations.ApiOperation;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestMethod;
-//import org.springframework.web.bind.annotation.RequestParam;
-//import org.springframework.web.bind.annotation.ResponseBody;
-//import randomnick.eleco.mapper.CommentMapper;
-//import randomnick.eleco.component.ResponseResult;
-//import randomnick.eleco.model.entity.Comment;
-//
-//import java.util.List;
-//
-//import static randomnick.eleco.component.KeyUtil.getUniqueKey;
-//
-//@Controller
-//@Api("用户操作评论")
-//@RequestMapping("/comment")
-//public class CommentController {
-//
-//    @Autowired
-//    CommentMapper commentMapper;
-//
-//    @ApiOperation("查看所有商品所有评论")
-//    @RequestMapping(value = "/findAllUser", method = RequestMethod.GET)
-//    @ResponseBody
-//    public ResponseResult findAllUser() {
-//        List<Comment> list = commentMapper.selectList(null);
-//        return new ResponseResult(200, "查询成功", list);
-//    }
-//
-//    @ApiOperation("查找商品的评论")
-//    @RequestMapping(value = "/findComment", method = RequestMethod.GET)
-//    @ResponseBody
-//    public ResponseResult findComment(@RequestParam("goodId") String goodId) {
-//        QueryWrapper<Comment> wrapper = new QueryWrapper<>();
-//        wrapper.eq("good_id", goodId);
-//        List<Comment> list = commentMapper.selectList(wrapper);
-//        return new ResponseResult(200, "查询成功", list);
-//    }
-//
-//    @ApiOperation("发布评论")
-//    @RequestMapping(value = "/postComment", method = RequestMethod.POST)
-//    @ResponseBody
-//    public ResponseResult postComment(@RequestParam("goodId") String goodId,
-//                                      @RequestParam("userId") String userId,
-//                                      @RequestParam("content") String content) {
-//        Comment comment = new Comment();
-//        comment.setId(getUniqueKey());
-//        comment.setGoodId(goodId);
-//        comment.setUserId(userId);
-//        comment.setContent(content);
-//        commentMapper.insert(comment);
-//        return new ResponseResult(200, "评论成功");
-//    }
-//
-//    @ApiOperation("删除评论")
-//    @RequestMapping(value = "/deleteComment", method = RequestMethod.DELETE)
-//    @ResponseBody
-//    public ResponseResult deleteComment(@RequestParam("id") String id) {
-//        commentMapper.deleteById(id);
-//        return new ResponseResult(200, "删除成功");
-//    }
-//
-//}
+package randomnick.eleco.controller;
+
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.*;
+import randomnick.eleco.common.api.ApiResult;
+import randomnick.eleco.model.dto.CommentDTO;
+import randomnick.eleco.model.entity.Comment;
+import randomnick.eleco.model.entity.User;
+import randomnick.eleco.model.vo.CommentVO;
+import randomnick.eleco.service.CommentService;
+import randomnick.eleco.service.UserService;
+
+import javax.annotation.Resource;
+import java.util.List;
+
+import static randomnick.eleco.jwt.JwtUtil.USER_NAME;
+
+@RestController
+@RequestMapping("/comment")
+public class CommentController extends BaseController {
+
+    @Resource
+    private CommentService commentService;
+    @Resource
+    private UserService userService;
+
+    @ApiOperation("获取评论")
+    @GetMapping("/get_comments")
+    public ApiResult<List<CommentVO>> getCommentsByTopicID(@RequestParam(value = "topicid", defaultValue = "1") String topicid) {
+        List<CommentVO> lstBmsComment = commentService.getCommentsByTopicID(topicid);
+        return ApiResult.success(lstBmsComment);
+    }
+
+    @ApiOperation("添加评论")
+    @PostMapping("/add_comment")
+    public ApiResult<Comment> add_comment(@RequestHeader(value = USER_NAME) String userName,
+                                          @RequestBody CommentDTO dto) {
+        User user = userService.getUserByUsername(userName);
+        Comment comment = commentService.create(dto, user);
+        return ApiResult.success(comment);
+    }
+}

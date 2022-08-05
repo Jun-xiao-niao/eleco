@@ -15,8 +15,8 @@ import org.springframework.util.ObjectUtils;
 import randomnick.eleco.mapper.UserMapper;
 import randomnick.eleco.model.dto.CreateTopicDTO;
 import randomnick.eleco.model.entity.User;
-import randomnick.eleco.model.vo.ProfileVO;
 import randomnick.eleco.service.PostService;
+import randomnick.eleco.model.vo.ProfileVO;
 import randomnick.eleco.mapper.TagMapper;
 import randomnick.eleco.mapper.TopicMapper;
 import randomnick.eleco.model.entity.Post;
@@ -114,7 +114,7 @@ public class PostServiceImpl extends ServiceImpl<TopicMapper, Post> implements P
         QueryWrapper<TopicTag> wrapper = new QueryWrapper<>();
         wrapper.lambda().eq(TopicTag::getTopicId, topic.getId());
         Set<String> set = new HashSet<>();
-        for (TopicTag articleTag : TopicTagService.list(wrapper)) {
+        for (TopicTag articleTag : topicTagService.list(wrapper)) {
             set.add(articleTag.getTagId());
         }
         List<Tag> tags = tagService.listByIds(set);

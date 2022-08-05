@@ -11,6 +11,7 @@ import randomnick.eleco.mapper.TopicTagMapper;
 import randomnick.eleco.model.entity.TopicTag;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
@@ -35,6 +36,11 @@ public class TopicTagServiceImpl extends ServiceImpl<TopicTagMapper, TopicTag> i
             topicTag.setTagId(tag.getId());
             this.baseMapper.insert(topicTag);
         });
+    }
+
+    @Override
+    public Set<String> selectTopicIdsByTagId(String id) {
+        return this.baseMapper.getTopicIdsByTagId(id);
     }
 
 }

@@ -5,6 +5,7 @@ import randomnick.eleco.model.entity.Tag;
 import randomnick.eleco.model.entity.TopicTag;
 
 import java.util.List;
+import java.util.Set;
 
 public interface TopicTagService extends IService<TopicTag> {
 
@@ -23,5 +24,13 @@ public interface TopicTagService extends IService<TopicTag> {
      * @return
      */
     void createTopicTag(String id, List<Tag> tags);
+    /**
+     * 获取标签换脸话题ID集合
+     *
+     * @param id
+     * @return
+     */
+    Set<String> selectTopicIdsByTagId(String id);
+
 
 }
