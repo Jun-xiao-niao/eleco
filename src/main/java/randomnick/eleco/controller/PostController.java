@@ -11,9 +11,10 @@ import randomnick.eleco.model.entity.User;
 import randomnick.eleco.service.PostService;
 import randomnick.eleco.common.api.ApiResult;
 import randomnick.eleco.model.vo.PostVO;
-import randomnick.eleco.service.UserService;
 
 import javax.annotation.Resource;
+
+import java.util.Map;
 
 import static randomnick.eleco.jwt.JwtUtil.USER_NAME;
 
@@ -44,6 +45,13 @@ public class PostController extends BaseController {
         User user = UserService.getUserByUsername(userName);
         Post topic = PostService.create(dto, user);
         return ApiResult.success(topic);
+    }
+
+    @ApiOperation("获取帖子")
+    @GetMapping()
+    public ApiResult<Map<String, Object>> view(@RequestParam("id") String id) {
+        Map<String, Object> map = PostService.viewTopic(id);
+        return ApiResult.success(map);
     }
 
 }

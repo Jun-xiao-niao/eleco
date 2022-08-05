@@ -4,6 +4,7 @@ package randomnick.eleco.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import randomnick.eleco.model.dto.RegisterDTO;
 import randomnick.eleco.model.entity.User;
+import randomnick.eleco.model.vo.ProfileVO;
 
 public interface UserService extends IService<User> {
 
@@ -21,5 +22,11 @@ public interface UserService extends IService<User> {
      * @return dbUser
      */
     User getUserByUsername(String username);
-
+    /**
+     * 获取用户信息
+     *
+     * @param id 用户ID
+     * @return
+     */
+    ProfileVO getUserProfile(String id);
 }

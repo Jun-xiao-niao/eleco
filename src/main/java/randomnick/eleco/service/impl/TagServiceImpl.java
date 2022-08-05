@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import randomnick.eleco.mapper.TagMapper;
 import randomnick.eleco.model.entity.Tag;
+import randomnick.eleco.service.PostService;
 import randomnick.eleco.service.TagService;
+import randomnick.eleco.service.TopicTagService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,10 +22,10 @@ import java.util.List;
 public class TagServiceImpl extends ServiceImpl<TagMapper, Tag> implements TagService {
 
     @Autowired
-    private randomnick.eleco.service.TopicTagService TopicTagService;
+    private TopicTagService topicTagService;
 
     @Autowired
-    private randomnick.eleco.service.PostService PostService;
+    private PostService postService;
 
 
     @Override

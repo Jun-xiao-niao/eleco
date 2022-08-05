@@ -3,11 +3,13 @@ package randomnick.eleco.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ObjectUtils;
+import randomnick.eleco.model.vo.ProfileVO;
 import randomnick.eleco.service.UserService;
 import randomnick.eleco.common.exception.ApiAsserts;
 import randomnick.eleco.mapper.UserMapper;
@@ -48,6 +50,17 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public User getUserByUsername(String username) {
         return baseMapper.selectOne(new LambdaQueryWrapper<User>().eq(User::getUsername, username));
+    }
+
+
+
+    @Override
+    public ProfileVO getUserProfile(String id) {
+        ProfileVO profile = new ProfileVO();
+        User user = baseMapper.selectById(id);
+        BeanUtils.copyProperties(user, profile);
+
+        return profile;
     }
 
 
