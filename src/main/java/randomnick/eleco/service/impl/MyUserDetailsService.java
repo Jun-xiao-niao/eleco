@@ -1,4 +1,4 @@
-package randomnick.eleco.Service.impl;
+package randomnick.eleco.service.impl;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import randomnick.eleco.mapper.UserMapper;
+import randomnick.eleco.model.entity.LoginUser;
 import randomnick.eleco.model.entity.User;
 
 @Service("userDetailsService")

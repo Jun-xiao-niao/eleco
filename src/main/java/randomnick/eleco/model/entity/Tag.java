@@ -23,7 +23,7 @@ public class Tag implements Serializable {
     @TableField("name")
     private String name;
     /**
-     * 当前标签下的话题个数
+     * 当前标签下的帖子个数
      */
     @TableField("topic_count")
     @Builder.Default

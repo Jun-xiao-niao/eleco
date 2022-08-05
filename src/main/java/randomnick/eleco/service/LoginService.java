@@ -1,4 +1,4 @@
-package randomnick.eleco.Service;
+package randomnick.eleco.service;
 
 import randomnick.eleco.component.ResponseResult;
 

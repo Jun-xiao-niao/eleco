@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import randomnick.eleco.Service.impl.MyUserDetailsService;
+import randomnick.eleco.service.impl.MyUserDetailsService;
 import randomnick.eleco.component.JwtAuthenticationTokenFilter;
 
 @Configuration
@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/v2/api-docs", "/configuration/ui", "/swagger-resources",
                         "/configuration/security", "/swagger-ui.html", "/webjars/**",
                         "/swagger-resources/configuration/ui","/swagge‌​r-ui.html","/user/logout",
-                        "/checked/**","/comment/**","/good/**","/user/**","/picture/**","/comment/**","/collect/**",
+                        "/checked/**","/comment/**","/good/**","/user/**","/picture/**","/comment/**","/collect/**","/post/**",
                         "/good/findSellingGood","/image/**")
                 //"/checked/**","/comment/**","/good/**","/user/**","/picture/**","/comment/**","/collect/**",   用于swagger测试（没有token）
                 .permitAll()

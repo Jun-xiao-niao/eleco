@@ -23,8 +23,8 @@
         t.view,t.collects,t.top,t.essence,
         t.create_time ,t.modify_time ,
         u.username,u.alias, u.avatar
-        FROM bms_post t
-        LEFT JOIN ums_user u
+        FROM post t
+        LEFT JOIN user u
         ON t.user_id = u.id
         <where>
             <if test="tab == 'hot'">

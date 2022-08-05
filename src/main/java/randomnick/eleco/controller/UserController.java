@@ -1,4 +1,4 @@
-package randomnick.eleco.Controller;
+package randomnick.eleco.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
-import randomnick.eleco.Service.LoginService;
-import randomnick.eleco.Service.UserService;
+import randomnick.eleco.service.LoginService;
+import randomnick.eleco.service.UserService;
 import randomnick.eleco.common.api.ApiResult;
 import randomnick.eleco.component.ResponseResult;
 import randomnick.eleco.model.dto.RegisterDTO;

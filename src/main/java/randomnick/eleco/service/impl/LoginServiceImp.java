@@ -1,4 +1,4 @@
-package randomnick.eleco.Service.impl;
+package randomnick.eleco.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
-import randomnick.eleco.Service.LoginService;
+import randomnick.eleco.service.LoginService;
 import randomnick.eleco.mapper.UserMapper;
 import randomnick.eleco.component.JwtUtil;
 import randomnick.eleco.component.RedisCache;

@@ -1,4 +1,4 @@
-package randomnick.eleco.Service.impl;
+package randomnick.eleco.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -8,12 +8,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ObjectUtils;
-import randomnick.eleco.Service.UserService;
+import randomnick.eleco.service.UserService;
 import randomnick.eleco.common.exception.ApiAsserts;
 import randomnick.eleco.mapper.UserMapper;
 import randomnick.eleco.model.dto.RegisterDTO;
 import randomnick.eleco.model.entity.User;
-import randomnick.eleco.utils.MD5Utils;
 
 import java.util.Date;
 
@@ -45,6 +44,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         baseMapper.insert(addUser);
 
         return addUser;
+    }
+    @Override
+    public User getUserByUsername(String username) {
+        return baseMapper.selectOne(new LambdaQueryWrapper<User>().eq(User::getUsername, username));
     }
 
 
