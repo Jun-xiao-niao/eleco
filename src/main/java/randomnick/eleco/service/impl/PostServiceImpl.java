@@ -56,14 +56,7 @@ public class PostServiceImpl extends ServiceImpl<TopicMapper, Post> implements P
         // 查询话题
         Page<PostVO> iPage = this.baseMapper.selectListAndPage(page, tab);
         // 查询话题的标签
-        iPage.getRecords().forEach(topic -> {
-            List<TopicTag> topicTags = topicTagService.selectByTopicId(topic.getId());
-            if (!topicTags.isEmpty()) {
-                List<String> tagIds = topicTags.stream().map(TopicTag::getTagId).collect(Collectors.toList());
-                List<Tag> tags = tagMapper.selectBatchIds(tagIds);
-                topic.setTags(tags);
-            }
-        });
+        setTopicTags(iPage);
         return iPage;
     }
 
@@ -126,5 +119,25 @@ public class PostServiceImpl extends ServiceImpl<TopicMapper, Post> implements P
         map.put("user", user);
 
         return map;
+    }
+
+    @Override
+    public Page<PostVO> searchByKey(String keyword, Page<PostVO> page) {
+        // 查询话题
+        Page<PostVO> iPage = this.baseMapper.searchByKey(page, keyword);
+        // 查询话题的标签
+        setTopicTags(iPage);
+        return iPage;
+    }
+
+    private void setTopicTags(Page<PostVO> iPage) {
+        iPage.getRecords().forEach(topic -> {
+            List<TopicTag> topicTags = topicTagService.selectByTopicId(topic.getId());
+            if (!topicTags.isEmpty()) {
+                List<String> tagIds = topicTags.stream().map(TopicTag::getTagId).collect(Collectors.toList());
+                List<Tag> tags = tagMapper.selectBatchIds(tagIds);
+                topic.setTags(tags);
+            }
+        });
     }
 }
