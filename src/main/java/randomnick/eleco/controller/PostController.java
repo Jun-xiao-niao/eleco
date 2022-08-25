@@ -13,6 +13,7 @@ import randomnick.eleco.model.entity.User;
 import randomnick.eleco.service.PostService;
 import randomnick.eleco.common.api.ApiResult;
 import randomnick.eleco.model.vo.PostVO;
+import randomnick.eleco.service.UserService;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -21,7 +22,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import static randomnick.eleco.jwt.JwtUtil.USER_NAME;
 
 @Controller
 @RestController
@@ -30,51 +30,61 @@ import static randomnick.eleco.jwt.JwtUtil.USER_NAME;
 public class PostController extends BaseController {
 
     @Resource
-    private PostService PostService;
+    private PostService postService;
     @Resource
-    private randomnick.eleco.service.UserService UserService;
+    private UserService userService;
 
-    @ApiOperation("获取帖子")
+    @ApiOperation("获取所有帖子（tab == hot  代表最经7天最热帖子）（tab == latest  代表最新的帖子）")
     @GetMapping("/list")
     public ApiResult<Page<PostVO>> list(@RequestParam(value = "tab", defaultValue = "latest") String tab,
                                         @RequestParam(value = "pageNo", defaultValue = "1")  Integer pageNo,
                                         @RequestParam(value = "size", defaultValue = "10") Integer pageSize) {
-        Page<PostVO> list = PostService.getList(new Page<>(pageNo, pageSize), tab);
+        Page<PostVO> list = postService.getList(new Page<>(pageNo, pageSize), tab);
         return ApiResult.success(list);
     }
 
     @ApiOperation("发表帖子")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public ApiResult<Post> create(@RequestHeader(value = USER_NAME) String userName
+    public ApiResult<Post> create(@RequestParam String username
             , @RequestBody CreateTopicDTO dto) {
-        User user = UserService.getUserByUsername(userName);
-        Post topic = PostService.create(dto, user);
+        User user = userService.getUserByUsername(username);
+        Post topic = postService.create(dto, user);
         return ApiResult.success(topic);
     }
 
     @ApiOperation("获取帖子")
     @GetMapping()
     public ApiResult<Map<String, Object>> view(@RequestParam("id") String id) {
-        Map<String, Object> map = PostService.viewTopic(id);
+        Map<String, Object> map = postService.viewTopic(id);
         return ApiResult.success(map);
     }
 
     @ApiOperation("获取推荐的帖子")
     @GetMapping("/recommend")
     public ApiResult<List<Post>> getRecommend(@RequestParam("topicId") String id) {
-        return ApiResult.success();
+        List<Post> topics = postService.getRecommend(id);
+        return ApiResult.success(topics);
     }
 
     @ApiOperation("更新帖子")
     @PostMapping("/update")
-    public ApiResult<Post> update(@RequestHeader(value = USER_NAME) String userName, @Valid @RequestBody Post post) {
+    public ApiResult<Post> update(@RequestParam String username, @Valid @RequestBody Post post) {
+        User user = userService.getUserByUsername(username);
+        Assert.isTrue(user.getId().equals(post.getUserId()), "非本人无权修改");
+        post.setModifyTime(new Date());
+        post.setContent(EmojiParser.parseToAliases(post.getContent()));
+        postService.updateById(post);
         return ApiResult.success(post);
     }
 
     @ApiOperation("删除帖子")
     @DeleteMapping("/delete/{id}")
-    public ApiResult<String> delete(@RequestHeader(value = USER_NAME) String userName, @PathVariable("id") String id) {
-
+    public ApiResult<String> delete(@RequestParam String username, @PathVariable("id") String topicId) {
+        User umsUser = userService.getUserByUsername(username);
+        Post topic = postService.getById(topicId);
+        Assert.notNull(topic, "话题不存在");
+        Assert.isTrue(topic.getUserId().equals(umsUser.getId()), "不可以删除别人的话题哟！");
+        postService.removeById(topicId);
         return ApiResult.success(null,"删除成功");
     }
 

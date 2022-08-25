@@ -2,6 +2,7 @@ package randomnick.eleco.model.vo;
 
 import lombok.Data;
 
+//帖子详细页，展示的作者信息
 @Data
 public class ProfileVO {
 

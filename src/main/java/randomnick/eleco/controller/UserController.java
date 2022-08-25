@@ -4,37 +4,30 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
+import randomnick.eleco.model.dto.LoginDTO;
 import randomnick.eleco.model.entity.Post;
-import randomnick.eleco.service.LoginService;
 import randomnick.eleco.service.PostService;
 import randomnick.eleco.service.UserService;
 import randomnick.eleco.common.api.ApiResult;
-import randomnick.eleco.component.ResponseResult;
 import randomnick.eleco.model.dto.RegisterDTO;
 import randomnick.eleco.model.entity.User;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
-@Controller
 @RestController
 @Api("用户功能")
 @RequestMapping("/user")
 public class UserController extends BaseController {
+
     @Resource
     private UserService userService;
 
-    @Autowired
-    private LoginService loginService;
     @Resource
     private PostService postService;
 
@@ -53,25 +46,24 @@ public class UserController extends BaseController {
 
     @ApiOperation("登录方法")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    @ResponseBody
-    public ResponseResult login(@RequestParam("username") String name,
-                                @RequestParam("password") String pwd,
-                                HttpServletResponse response,
-                                HttpSession session) {
+    public ApiResult<Map<String, String>> login(@Valid @RequestBody LoginDTO dto) {
+        return userService.executeLogin(dto);
+    }
 
-        return loginService.login(name, pwd);
-
+    @ApiOperation("登录后获取前台用户信息")
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
+    public ApiResult<User> getUser(@RequestBody String username) {
+        User user = userService.getUserByUsername(username);
+        return ApiResult.success(user);
     }
 
     @ApiOperation("退出方法")
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    @ResponseBody
-    public ResponseResult logout() {
-        return loginService.logout();
-
+    public ApiResult<Object> logout() {
+        return userService.executeLogout();
     }
 
-    @ApiOperation("个人中心的信息")
+    @ApiOperation("获取个人中心的信息")
     @GetMapping("/{username}")
     public ApiResult<Map<String, Object>> getUserByName(@PathVariable("username") String username,
                                                         @RequestParam(value = "pageNo", defaultValue = "1") Integer pageNo,

@@ -18,8 +18,6 @@ import java.util.Set;
 
 /**
  * Tag 实现类
- *
- * @author Knox 2020/11/7
  */
 @Service
 public class TagServiceImpl extends ServiceImpl<TagMapper, Tag> implements TagService {
@@ -36,10 +34,10 @@ public class TagServiceImpl extends ServiceImpl<TagMapper, Tag> implements TagSe
         List<Tag> tagList = new ArrayList<>();
         for (String tagName : tagNames) {
             Tag tag = this.baseMapper.selectOne(new LambdaQueryWrapper<Tag>().eq(Tag::getName, tagName));
-            if (tag == null) {
+            if (tag == null) {  //这是一个新标签
                 tag = Tag.builder().name(tagName).build();
                 this.baseMapper.insert(tag);
-            } else {
+            } else {  //这是一个存在的标签
                 tag.setTopicCount(tag.getTopicCount() + 1);
                 this.baseMapper.updateById(tag);
             }

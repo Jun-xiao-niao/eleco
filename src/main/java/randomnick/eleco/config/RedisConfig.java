@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-import randomnick.eleco.component.FastJson2JsonRedisSerializer;
+import randomnick.eleco.utils.FastJson2JsonRedisSerializer;
 
 @Configuration
 @EnableCaching

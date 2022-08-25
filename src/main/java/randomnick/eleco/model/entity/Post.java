@@ -65,13 +65,6 @@ public class Post implements Serializable {
     private Integer view = 0;
 
     /**
-     * 专栏ID，默认不分栏
-     */
-    @TableField("section_id")
-    @Builder.Default
-    private Integer sectionId = 0;
-
-    /**
      * 置顶
      */
     @TableField("top")

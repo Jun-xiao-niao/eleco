@@ -13,8 +13,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import randomnick.eleco.jwt.JwtAuthenticationTokenFilter;
 import randomnick.eleco.service.impl.MyUserDetailsService;
-import randomnick.eleco.component.JwtAuthenticationTokenFilter;
 
 @Configuration
 @EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
@@ -26,20 +26,31 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
 
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/index","/user/login","/user/regist",
-                        "/v2/api-docs", "/configuration/ui", "/swagger-resources",
+        http
+                //关闭csrf
+                .csrf().disable()
+                //不通过Session获取SecurityContext
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .authorizeRequests()
+                // 对于登录接口 允许访问
+                .antMatchers("/index", "/v2/api-docs", "/configuration/ui", "/swagger-resources",
                         "/configuration/security", "/swagger-ui.html", "/webjars/**",
-                        "/swagger-resources/configuration/ui","/swagge‌​r-ui.html","/user/logout",
-                        "/checked/**","/comment/**","/good/**","/user/**","/picture/**","/comment/**","/collect/**","/post/**",
-                        "/good/findSellingGood","/image/**")
-                //"/checked/**","/comment/**","/good/**","/user/**","/picture/**","/comment/**","/collect/**",   用于swagger测试（没有token）
+                        "/swagger-resources/configuration/ui", "/swagge‌​r-ui.html",
+                        "/user/logout","/user/login", "/user/register",
+                        "/checked/**","/comment/**","/post/**","/user/**","/picture/**","/search/**","/relationship/**") //用于swagger测试（没有token)
                 .permitAll()
                 .antMatchers("/user/admin").hasAuthority("admin")
-                .anyRequest().authenticated()
-                .and().csrf().disable().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                // 除上面外的所有请求全部需要鉴权认证
+                .anyRequest().authenticated();
 
         //添加过滤器
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
@@ -72,18 +83,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public UserDetailsService myUserService(){
+    public UserDetailsService myUserService() {
         return new MyUserDetailsService();
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    @Override
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
-    }
 }

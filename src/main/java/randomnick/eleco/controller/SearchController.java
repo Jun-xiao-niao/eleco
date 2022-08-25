@@ -12,23 +12,23 @@ import randomnick.eleco.service.PostService;
 
 import javax.annotation.Resource;
 
-public class SearchController {
-    @RestController
-    @RequestMapping("/search")
-    public class BmsSearchController extends BaseController {
 
-        @Resource
-        private PostService postService;
+@RestController
+@RequestMapping("/search")
+public class SearchController extends BaseController {
 
-        @ApiOperation("搜索帖子")
-        @GetMapping
-        public ApiResult<Page<PostVO>> searchList(@RequestParam("keyword") String keyword,
-                                                  @RequestParam("pageNum") Integer pageNum,
-                                                  @RequestParam("pageSize") Integer pageSize) {
-            Page<PostVO> results = postService.searchByKey(keyword, new Page<>(pageNum, pageSize));
-            return ApiResult.success(results);
-        }
+    @Resource
+    private PostService postService;
 
+    @ApiOperation("搜索帖子")
+    @GetMapping
+    public ApiResult<Page<PostVO>> searchList(@RequestParam("keyword") String keyword,
+                                              @RequestParam("pageNum") Integer pageNum,
+                                              @RequestParam("pageSize") Integer pageSize) {
+        Page<PostVO> results = postService.searchByKey(keyword, new Page<>(pageNum, pageSize));
+        return ApiResult.success(results);
     }
 
 }
+
+

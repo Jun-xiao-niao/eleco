@@ -21,13 +21,13 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
 
     @Override
     public List<CommentVO> getCommentsByTopicID(String topicid) {
-        List<CommentVO> lstComment = new ArrayList<CommentVO>();
+        List<CommentVO> comment = new ArrayList<>();
         try {
-            lstComment = this.baseMapper.getCommentsByTopicID(topicid);
+            comment = this.baseMapper.getCommentsByTopicID(topicid);
         } catch (Exception e) {
-            log.info("lstBmsComment失败");
+            log.info("getCommentsByTopicID(topicid)失败");
         }
-        return lstComment;
+        return comment;
     }
 
 

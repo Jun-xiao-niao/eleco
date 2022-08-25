@@ -1,4 +1,4 @@
-package randomnick.eleco.component;
+package randomnick.eleco.utils;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.parser.ParserConfig;
@@ -12,7 +12,7 @@ import org.springframework.util.Assert;
 
 import java.nio.charset.Charset;
 
-public class FastJson2JsonRedisSerializer <T> implements RedisSerializer<T> {
+public class FastJson2JsonRedisSerializer<T> implements RedisSerializer<T> {
     @SuppressWarnings("unused")
     private ObjectMapper objectMapper = new ObjectMapper();
 

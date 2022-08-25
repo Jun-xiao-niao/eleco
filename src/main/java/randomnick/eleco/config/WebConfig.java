@@ -13,7 +13,7 @@ public class WebConfig extends WebMvcConfigurationSupport {
         registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
         //通过image访问本地的图片
-        registry.addResourceHandler("/image/**").addResourceLocations("file:C:/Users/Junxiaoniao/Desktop/west2/Picture/");
+//        registry.addResourceHandler("/image/**").addResourceLocations("file:C:/Users/Junxiaoniao/Desktop/west2/Picture/");
     }
 
 }

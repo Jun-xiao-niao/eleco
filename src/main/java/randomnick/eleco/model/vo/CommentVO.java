@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.util.Date;
 
+//返回给客户端的评论信息,增加评论者用户名
 @Data
 public class CommentVO {
 

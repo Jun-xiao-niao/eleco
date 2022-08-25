@@ -1,17 +1,17 @@
-package randomnick.eleco.common.mybatisplus;
+package randomnick.eleco.config;
 
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-//@MapperScan("randomnick.eleco.mapper")
 public class MybatisPlusConfig {
+
+    //实现分页
 
     /**
      * 新的分页插件,一缓和二缓遵循mybatis的规则,

@@ -33,7 +33,7 @@ public class TagController extends BaseController {
         LambdaQueryWrapper<Tag> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(Tag::getName, tagName);
         Tag one = tagService.getOne(wrapper);
-        Assert.notNull(one, "帖子不存在，或已被管理员删除");
+        Assert.notNull(one, "硬件分类不存在");
         Page<Post> topics = tagService.selectTopicsByTagId(new Page<>(page, size), one.getId());
         // 其他热门标签
         Page<Tag> hotTags = tagService.page(new Page<>(1, 10),

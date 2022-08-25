@@ -8,6 +8,8 @@ import org.springframework.stereotype.Repository;
 import randomnick.eleco.model.entity.Post;
 import randomnick.eleco.model.vo.PostVO;
 
+import java.util.List;
+
 @Repository
 public interface TopicMapper extends BaseMapper<Post> {
     /**
@@ -27,5 +29,14 @@ public interface TopicMapper extends BaseMapper<Post> {
      * @return
      */
     Page<PostVO> searchByKey(@Param("page") Page<PostVO> page, @Param("keyword") String keyword);
+
+    /**
+     * 获取10篇推荐
+     *
+     * @param id
+     * @return
+     */
+    List<Post> selectRecommend(@Param("id") String id);
+
 
 }

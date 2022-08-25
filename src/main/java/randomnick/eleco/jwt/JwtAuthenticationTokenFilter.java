@@ -1,4 +1,4 @@
-package randomnick.eleco.component;
+package randomnick.eleco.jwt;
 
 import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +7,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
+import randomnick.eleco.model.entity.LoginUser;
 import randomnick.eleco.model.entity.User;
+import randomnick.eleco.utils.RedisCache;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -32,24 +34,24 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
             return;
         }
         //解析token
-        String userid;
+        String username;
         try {
             Claims claims = JwtUtil.parseJWT(token);
-            userid = claims.getSubject();
+            username = claims.getSubject();
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("token非法");
         }
         //从redis中获取用户信息
-        String redisKey = "login:" + userid;
-        User user = redisCache.getCacheObject(redisKey);
-        if(Objects.isNull(user)){
+        String redisKey = "login:" + username;
+        LoginUser loginUser = redisCache.getCacheObject(redisKey);
+        if(Objects.isNull(loginUser)){
             throw new RuntimeException("用户未登录");
         }
         //存入SecurityContextHolder
         //TODO 获取权限信息封装到Authentication中
         UsernamePasswordAuthenticationToken authenticationToken =
-                new UsernamePasswordAuthenticationToken(user,null,null);
+                new UsernamePasswordAuthenticationToken(loginUser,null,loginUser.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
         //放行
         filterChain.doFilter(request, response);

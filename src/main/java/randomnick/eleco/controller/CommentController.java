@@ -13,7 +13,6 @@ import randomnick.eleco.service.UserService;
 import javax.annotation.Resource;
 import java.util.List;
 
-import static randomnick.eleco.jwt.JwtUtil.USER_NAME;
 
 @RestController
 @RequestMapping("/comment")
@@ -24,18 +23,18 @@ public class CommentController extends BaseController {
     @Resource
     private UserService userService;
 
-    @ApiOperation("获取评论")
+    @ApiOperation("获取评论，时间降序")
     @GetMapping("/get_comments")
-    public ApiResult<List<CommentVO>> getCommentsByTopicID(@RequestParam(value = "topicid", defaultValue = "1") String topicid) {
-        List<CommentVO> lstBmsComment = commentService.getCommentsByTopicID(topicid);
-        return ApiResult.success(lstBmsComment);
+    public ApiResult<List<CommentVO>> getCommentsByTopicID(@RequestParam(value = "topicid") String topicid) {
+        List<CommentVO> comment = commentService.getCommentsByTopicID(topicid);
+        return ApiResult.success(comment);
     }
 
     @ApiOperation("添加评论")
     @PostMapping("/add_comment")
-    public ApiResult<Comment> add_comment(@RequestHeader(value = USER_NAME) String userName,
+    public ApiResult<Comment> add_comment(@RequestParam String username,
                                           @RequestBody CommentDTO dto) {
-        User user = userService.getUserByUsername(userName);
+        User user = userService.getUserByUsername(username);
         Comment comment = commentService.create(dto, user);
         return ApiResult.success(comment);
     }

@@ -85,7 +85,7 @@
             <version>2.6.1</version>
         </dependency>
 
-        <!--mysqk依赖-->
+        <!--mysql依赖-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

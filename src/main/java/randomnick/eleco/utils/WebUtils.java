@@ -1,4 +1,4 @@
-package randomnick.eleco.component;
+package randomnick.eleco.utils;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

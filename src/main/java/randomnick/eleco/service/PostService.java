@@ -7,6 +7,7 @@ import randomnick.eleco.model.entity.Post;
 import randomnick.eleco.model.entity.User;
 import randomnick.eleco.model.vo.PostVO;
 
+import java.util.List;
 import java.util.Map;
 
 public interface PostService extends IService<Post> {
@@ -45,5 +46,13 @@ public interface PostService extends IService<Post> {
      * @return
      */
     Page<PostVO> searchByKey(String keyword, Page<PostVO> page);
+
+    /**
+     * 获取随机推荐10篇
+     *
+     * @param id
+     * @return
+     */
+    List<Post> getRecommend(String id);
 
 }
